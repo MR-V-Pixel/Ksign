@@ -14,7 +14,6 @@ struct DownloadItemRow: View {
     
     var body: some View {
         HStack(spacing: 12) {
-            // Icon based on file state
             Image(systemName: item.isFinished ? "doc.zipper" : "arrow.down.circle")
                 .font(.title2)
                 .foregroundColor(.accentColor)

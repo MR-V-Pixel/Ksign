@@ -158,7 +158,7 @@ private extension DownloaderView {
         }
         
         guard let validUrl = URL(string: finalUrl) else {
-            UIAlertController.showAlertWithOk(title: "Error", message: "Invalid URL format")
+            UIAlertController.showAlertWithOk(title: .localized("Error"), message: .localized("Invalid URL format"))
             return
         }
         
@@ -168,9 +168,9 @@ private extension DownloaderView {
             downloadManager.checkFileTypeAndDownload(url: validUrl) { result in
                 switch result {
                 case .success:
-                    UIAlertController.showAlertWithOk(title: "Success", message: "The IPA file is being downloaded!\nYou can close this window or download more!")
+                    UIAlertController.showAlertWithOk(title: .localized("Success"), message: .localized("The IPA file is being downloaded!\nYou can close this window or download more!"))
                 case .failure(let error):
-                    UIAlertController.showAlertWithOk(title: "Error", message: error.localizedDescription)
+                    UIAlertController.showAlertWithOk(title: .localized("Error"), message: error.localizedDescription)
                 }
             }
         } else {
@@ -191,7 +191,7 @@ private extension DownloaderView {
             DispatchQueue.main.async {
                 if (err != nil) {
                     UIAlertController.showAlertWithOk(
-                        title: "Error",
+                        title: .localized("Error"),
                         message: .localized("Whoops!, something went wrong when extracting the file. \nMaybe try switching the extraction library in the settings?"),
                     )
                 }
@@ -219,7 +219,7 @@ private extension DownloaderView {
                 }
             }
         } catch {
-            UIAlertController.showAlertWithOk(title: "Error", message: error.localizedDescription)
+            UIAlertController.showAlertWithOk(title: .localized("Error"), message: error.localizedDescription)
         }
     }
 } 

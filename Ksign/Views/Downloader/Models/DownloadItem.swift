@@ -16,28 +16,14 @@ struct DownloadItem: Identifiable {
     var progress: Double
     var totalBytes: Int64
     var bytesDownloaded: Int64
-    
+
     var formattedFileSize: String {
-        let formatter = ByteCountFormatter()
-        formatter.allowedUnits = [.useAll]
-        formatter.countStyle = .file
-        
-        if isFinished || totalBytes > 0 {
-            return formatter.string(fromByteCount: totalBytes)
-        } else {
-            return "Unknown size"
-        }
+        return totalBytes.formattedByteCount
     }
     
     var progressText: String {
-        if isFinished {
-            return "Completed"
-        } else if progress > 0 {
-            let downloadedStr = ByteCountFormatter.string(fromByteCount: bytesDownloaded, countStyle: .file)
-            let totalStr = ByteCountFormatter.string(fromByteCount: totalBytes, countStyle: .file)
-            return "\(downloadedStr) of \(totalStr) (\(Int(progress * 100))%)"
-        } else {
-            return "Starting download..."
-        }
+        let downloadedStr = bytesDownloaded.formattedByteCount
+        let totalStr = totalBytes.formattedByteCount
+        return "\(downloadedStr) / \(totalStr) (\(Int(progress * 100))%)"
     }
 } 

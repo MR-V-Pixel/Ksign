@@ -70,8 +70,6 @@ class IPADownloadManager: NSObject, ObservableObject {
                 }
             }
             
-
-            
         } catch {
             print("Failed to load downloaded IPAs: \(error)")
         }
