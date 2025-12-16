@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-// Model for download items
 struct DownloadItem: Identifiable {
     let id = UUID()
     let title: String

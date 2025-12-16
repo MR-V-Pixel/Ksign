@@ -8,47 +8,30 @@
 import SwiftUI
 import WebKit
 
-// Web View Sheet
 struct WebViewSheet: View {
     @ObservedObject var downloadManager: IPADownloadManager
-    @Binding var isPresented: Bool
+    @Environment(\.dismiss) private var dismiss
+
     let url: URL
-    @Binding var errorMessage: String
-    @State private var isLoading = false
-    @State private var title = "Web Browser"
     
     var body: some View {
         NavigationView {
             ZStack {
                 WebViewContainer(
                     downloadManager: downloadManager,
-                    isPresented: $isPresented,
-                    errorMessage: $errorMessage,
-                    isLoading: $isLoading,
-                    title: $title,
-                    url: url
+                    url: url,
                 )
                 
-                if isLoading {
-                    ProgressView()
-                        .progressViewStyle(CircularProgressViewStyle())
-                        .accentColor(.accentColor)
-                        .scaleEffect(1.5)
+            }
+            .navigationTitle("Web Browser")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button("Close") {
+                        dismiss()
+                    }
                 }
             }
-            .navigationTitle(title)
-            .navigationBarItems(
-                leading: Button("Close") {
-                    isPresented = false
-                },
-                trailing: Button(action: {
-                    // Reload the web view
-                }) {
-                    Image(systemName: "arrow.clockwise")
-                        .foregroundColor(.accentColor)
-                }
-            )
         }
-        .accentColor(.accentColor)
     }
-} 
+}

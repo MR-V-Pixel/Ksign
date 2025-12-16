@@ -10,7 +10,6 @@ import SwiftUI
 // Download Item Row
 struct DownloadItemRow: View {
     let item: DownloadItem
-    @State private var isHovering = false
     var onTap: (DownloadItem) -> Void
     
     var body: some View {
@@ -40,16 +39,8 @@ struct DownloadItemRow: View {
             
             Spacer()
         }
-        .padding(.vertical, 8)
+        .padding(.vertical, 6)
         .contentShape(Rectangle())
-        .background(
-            RoundedRectangle(cornerRadius: 8)
-                .fill(isHovering ? Color.gray.opacity(0.1) : Color.clear)
-                .animation(.easeInOut(duration: 0.2), value: isHovering)
-        )
-        .onHover { hovering in
-            isHovering = hovering
-        }
         .onTapGesture {
             if item.isFinished {
                 let generator = UIImpactFeedbackGenerator(style: .light)

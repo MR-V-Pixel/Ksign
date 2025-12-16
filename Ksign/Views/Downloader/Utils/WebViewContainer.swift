@@ -10,57 +10,21 @@ import WebKit
 
 struct WebViewContainer: UIViewRepresentable {
     @ObservedObject var downloadManager: IPADownloadManager
-    @Binding var isPresented: Bool
-    @Binding var errorMessage: String
-    @Binding var isLoading: Bool
-    @Binding var title: String
-    var initialURL: URL
-    
-    let webView: WKWebView
-    
-    init(downloadManager: IPADownloadManager, isPresented: Binding<Bool>, errorMessage: Binding<String>, isLoading: Binding<Bool>, title: Binding<String>, url: URL) {
-        self.downloadManager = downloadManager
-        self._isPresented = isPresented
-        self._errorMessage = errorMessage
-        self._isLoading = isLoading
-        self._title = title
-        self.initialURL = url
-        
-        let config = WKWebViewConfiguration()
-        let preferences = WKPreferences()
-        preferences.javaScriptEnabled = true
-        config.preferences = preferences
-        
-        config.processPool = WKProcessPool()
-        self.webView = WKWebView(frame: .zero, configuration: config)
-    }
-    
+    var url: URL
     func makeCoordinator() -> WebViewCoordinator {
         WebViewCoordinator(self)
     }
     
     func makeUIView(context: Context) -> WKWebView {
+        let config = WKWebViewConfiguration()
+        
+        config.processPool = WKProcessPool()
+        
+        let webView = WKWebView(frame: .zero, configuration: config)
         webView.navigationDelegate = context.coordinator
+        webView.uiDelegate = context.coordinator
         
-        let windowOpenScript = WKUserScript(
-            source: """
-            window.nativeOpen = window.open;
-            window.open = function(url, target, features) {
-                if (url) {
-                    window.webkit.messageHandlers.windowOpen.postMessage(url);
-                    return null;
-                } else {
-                    return window.nativeOpen(url, target, features);
-                }
-            };
-            """,
-            injectionTime: .atDocumentStart,
-            forMainFrameOnly: false
-        )
-        
-        webView.configuration.userContentController.addUserScript(windowOpenScript)
-        
-        let request = URLRequest(url: initialURL)
+        let request = URLRequest(url: url)
         webView.load(request)
         
         return webView
@@ -74,8 +38,8 @@ struct WebViewContainer: UIViewRepresentable {
         downloadManager.handleITMSServicesURL(url) { result in
             DispatchQueue.main.async {
                 switch result {
-                case .success(let filename):
-                    self.isPresented = false
+                case .success:
+                    UIAlertController.showAlertWithOk(title: "Success", message: "The IPA file is being downloaded!\nYou can close this window or download more!")
                 case .failure(let error):
                     UIAlertController.showAlertWithOk(title: "Error", message: error.localizedDescription)
                 }
@@ -84,10 +48,13 @@ struct WebViewContainer: UIViewRepresentable {
     }
     
     func downloadDirectFile(_ url: URL) {
-        isPresented = false
-        
-        downloadManager.checkFileTypeAndDownload(url: url) { _ in
-            // Result handled by download manager
+        downloadManager.checkFileTypeAndDownload(url: url) { result in
+            switch result {
+            case .success:
+                UIAlertController.showAlertWithOk(title: "Success", message: "The IPA file is being downloaded!\nYou can close this window or download more!")
+            case .failure(let error):
+                UIAlertController.showAlertWithOk(title: "Error", message: error.localizedDescription)
+            }
         }
     }
-} 
+}
