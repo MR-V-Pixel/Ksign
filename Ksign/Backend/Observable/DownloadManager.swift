@@ -14,7 +14,7 @@ import UserNotifications
 // Import the error handlers module
 @_exported import class UIKit.UIImpactFeedbackGenerator
 
-class Download: Identifiable, @unchecked Sendable {
+class Download: Identifiable, @unchecked Sendable, ObservableObject {
 	@Published var progress: Double = 0.0
 	@Published var bytesDownloaded: Int64 = 0
 	@Published var totalBytes: Int64 = 0
@@ -25,7 +25,19 @@ class Download: Identifiable, @unchecked Sendable {
 		? unpackageProgress
 		: (0.3 * unpackageProgress) + (0.7 * progress)
 	}
+
+	var formattedFileSize: String {
+		return totalBytes.formattedByteCount
+	}
 	
+	var progressText: String {
+		if unpackageProgress > 0 {
+			return "\(Int(unpackageProgress * 100))%"
+		}
+		let downloadedStr = bytesDownloaded.formattedByteCount
+		let totalStr = totalBytes.formattedByteCount
+		return "\(downloadedStr) / \(totalStr) (\(Int(progress * 100))%)"
+	}
     var task: URLSessionDownloadTask?
     var resumeData: Data?
 	
@@ -195,13 +207,12 @@ extension DownloadManager: URLSessionDownloadDelegate {
 	func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
 		guard let download = getDownloadTask(by: downloadTask) else { return }
 		
-		let tempDirectory = FileManager.default.temporaryDirectory
-		let customTempDir = tempDirectory.appendingPathComponent("FeatherDownloads", isDirectory: true)
+		let downloadDir = URL.documentsDirectory.appendingPathComponent("Downloads")
 		
 		do {
-			try FileManager.default.createDirectoryIfNeeded(at: customTempDir)
+			try FileManager.default.createDirectoryIfNeeded(at: downloadDir)
 			let suggestedFileName = downloadTask.response?.suggestedFilename ?? download.fileName
-			let destinationURL = customTempDir.appendingPathComponent(suggestedFileName)
+			let destinationURL = downloadDir.appendingPathComponent(suggestedFileName)
 			try FileManager.default.removeFileIfNeeded(at: destinationURL)
 			try FileManager.default.moveItem(at: location, to: destinationURL)
 			self.handlePachageFile(url: destinationURL, dl: download) { err in

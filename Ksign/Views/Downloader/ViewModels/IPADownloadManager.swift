@@ -11,6 +11,14 @@ import WebKit
 class IPADownloadManager: NSObject, ObservableObject {
     @Published var downloadItems: [DownloadItem] = []
     
+    var activeItems: [DownloadItem] {
+        downloadItems.filter { !$0.isFinished }
+    }
+    
+    var finishedItems: [DownloadItem] {
+        downloadItems.filter { $0.isFinished }
+    }
+    
     private var urlSession: URLSession!
     private var activeDownloads: [Int: String] = [:] // taskIdentifier -> downloadItem.id
     
@@ -35,7 +43,7 @@ class IPADownloadManager: NSObject, ObservableObject {
     func loadDownloadedIPAs() {
         let fileManager = FileManager.default
         
-        let downloadDirectory = URL.documentsDirectory.appendingPathComponent("IPADownloads")
+        let downloadDirectory = URL.documentsDirectory.appendingPathComponent("Downloads")
         
         
         let activeDownloads = downloadItems.filter { !$0.isFinished }
@@ -77,7 +85,7 @@ class IPADownloadManager: NSObject, ObservableObject {
     
     func startDownload(url: URL, filename: String) {
         let fileManager = FileManager.default
-        let downloadDirectory = URL.documentsDirectory.appendingPathComponent("IPADownloads")
+        let downloadDirectory = URL.documentsDirectory.appendingPathComponent("Downloads")
         try? fileManager.createDirectoryIfNeeded(at: downloadDirectory)
         
         let destinationURL = downloadDirectory.appendingPathComponent(filename)
@@ -92,7 +100,7 @@ class IPADownloadManager: NSObject, ObservableObject {
         )
         
         DispatchQueue.main.async {
-            self.downloadItems.append(item)
+            self.downloadItems.insert(item, at: 0)
         }
         
         let task = urlSession.downloadTask(with: url)

@@ -33,12 +33,28 @@ struct DownloadItemRow: View {
     
     var body: some View {
         HStack(spacing: 12) {
-            Image(systemName: item.isFinished ? "doc.zipper" : "arrow.down.circle")
-                .font(.title2)
-                .foregroundColor(.accentColor)
-                .frame(width: 32, height: 32)
-                .contentShape(Rectangle())
-            
+            if item.isFinished {
+                Image(systemName: "doc.zipper")
+                    .font(.title2)
+                    .foregroundColor(.accentColor)
+                    .frame(width: 32, height: 32)
+                    .contentShape(Rectangle())
+            } else {
+                if #available(iOS 17.0, *) {
+                    Image(systemName: "arrow.down.document")
+                        .font(.title2)
+                        .foregroundColor(.accentColor)
+                        .frame(width: 32, height: 32)
+                        .contentShape(Rectangle())
+                        .symbolEffect(.pulse)
+                } else {
+                    Image(systemName: "arrow.down.document")
+                        .font(.title2)
+                        .foregroundColor(.accentColor)
+                        .frame(width: 32, height: 32)
+                        .contentShape(Rectangle())
+                }
+            }
             VStack(alignment: .leading, spacing: 4) {
                 Text(item.title)
                     .font(.body)
@@ -76,6 +92,9 @@ struct DownloadItemRow: View {
         .contextMenu {
             fileConfirmationDialogButtons()
         }
+        .swipeActions(edge: .trailing) {
+            swipeActions()
+        }
     }
     
     @ViewBuilder
@@ -105,4 +124,57 @@ struct DownloadItemRow: View {
             Label(.localized("Delete"), systemImage: "trash")
         }
     }
-} 
+
+    @ViewBuilder
+    private func swipeActions() -> some View {
+        Button(role: .destructive) {
+            withAnimation {
+                deleteItem(item)
+            }
+        } label: {
+            Label(.localized("Delete"), systemImage: "trash")
+        }
+    }
+}
+
+
+struct AppStoreDownloadItemRow: View {
+    @ObservedObject var download: Download
+    
+    var body: some View {
+        HStack(spacing: 12) {
+            if #available(iOS 17.0, *) {
+                Image(systemName: download.unpackageProgress > 0 ? "doc.zipper" : "arrow.down.document")
+                    .font(.title2)
+                    .foregroundColor(.accentColor)
+                    .frame(width: 32, height: 32)
+                    .contentShape(Rectangle())
+                    .symbolEffect(.pulse)
+            } else {
+                Image(systemName: download.unpackageProgress > 0 ? "doc.zipper" : "arrow.down.document")
+                    .font(.title2)
+                    .foregroundColor(.accentColor)
+                    .frame(width: 32, height: 32)
+                    .contentShape(Rectangle())
+            }
+            
+            VStack(alignment: .leading, spacing: 4) {
+                Text(download.fileName)
+                    .font(.body)
+                    .lineLimit(1)
+                
+                Text(download.progressText)
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                
+                ProgressView(value: download.overallProgress)
+                    .progressViewStyle(LinearProgressViewStyle())
+                    .accentColor(.accentColor)
+            }
+            
+            Spacer()
+        }
+        .padding(.vertical, 6)
+        .contentShape(Rectangle())
+    }
+}

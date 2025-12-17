@@ -22,29 +22,49 @@ struct DownloaderView: View {
     @State private var _searchText = ""
     
     private var filteredDownloadItems: [DownloadItem] {
+        let items = downloadManager.finishedItems
         if _searchText.isEmpty {
-            return downloadManager.downloadItems
+            return items
         } else {
-            return downloadManager.downloadItems.filter { $0.title.localizedCaseInsensitiveContains(_searchText) }
+            return items.filter { $0.title.localizedCaseInsensitiveContains(_searchText) }
         }
     }
 
     var body: some View {
-        NBNavigationView("IPA Downloads") {
+        NBNavigationView("Downloads") {
             List {
-                ForEach(filteredDownloadItems) { item in
-                    DownloadItemRow(
-                        item: item,
-                        shareItems: $shareItems,
-                        importIpaToLibrary: { item in importIpaToLibrary(item) },
-                        exportToFiles: { item in exportToFiles(item) },
-                        deleteItem: { item in deleteItem(item) }
-                    )
+                if !libraryManager.downloads.isEmpty || !downloadManager.activeItems.isEmpty {
+                    NBSection(.localized("Downloading"), secondary: (libraryManager.downloads.count + downloadManager.activeItems.count).description) {
+                        ForEach(libraryManager.downloads) { download in
+                            AppStoreDownloadItemRow(download: download)
+                        }
+                        ForEach(downloadManager.activeItems) { item in
+                            DownloadItemRow(
+                                item: item,
+                                shareItems: $shareItems,
+                                importIpaToLibrary: { item in importIpaToLibrary(item) },
+                                exportToFiles: { item in exportToFiles(item) },
+                                deleteItem: { item in deleteItem(item) }
+                            )
+                        }
+                    }
+                }
+                
+                NBSection(.localized("Downloaded"), secondary: filteredDownloadItems.count.description) {
+                    ForEach(filteredDownloadItems) { item in
+                        DownloadItemRow(
+                            item: item,
+                            shareItems: $shareItems,
+                            importIpaToLibrary: { item in importIpaToLibrary(item) },
+                            exportToFiles: { item in exportToFiles(item) },
+                            deleteItem: { item in deleteItem(item) }
+                        )
+                    }
                 }
             }
             .listStyle(.plain)
             .overlay {
-                if downloadManager.downloadItems.isEmpty {
+                if downloadManager.finishedItems.isEmpty && downloadManager.activeItems.isEmpty && libraryManager.downloads.isEmpty {
                     if #available(iOS 17, *) {
                         ContentUnavailableView {
                             Label(.localized("No downloaded IPAs"), systemImage: "square.and.arrow.down.fill")
@@ -70,7 +90,7 @@ struct DownloaderView: View {
                    _addDownload()
                 }
             }
-            .onAppear {
+            .onChange(of: libraryManager.downloads.count) { _ in
                 downloadManager.loadDownloadedIPAs()
             }
             .fullScreenCover(item: $webViewURL) { url in
@@ -137,8 +157,8 @@ private extension DownloaderView {
 private extension DownloaderView {
     func _addDownload() {
         UIAlertController.showAlertWithTextBox(
-            title: .localized("Enter Website URL"),
-            message: .localized("Enter the URL of the website containing the IPA file"),
+            title: .localized("Enter URL"),
+            message: .localized("Enter the URL of the website containing the IPA file (Direct install/ITMS Services) or URL to the IPA file, supported: \nhttps://example.com\nitms-services://?url=https://example.com\nhttps://example.com/app.ipa"),
             textFieldPlaceholder: .localized("https://example.com"),
             submit: .localized("OK"),
             cancel: .localized("Cancel"),
@@ -209,12 +229,10 @@ private extension DownloaderView {
     func deleteItem(_ item: DownloadItem) {
         do {
             try FileManager.default.removeItem(at: item.localPath)
-            downloadManager.downloadItems.removeAll { $0.id == item.id }
-            DispatchQueue.main.async {
-                withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
-                    if let index = downloadManager.downloadItems.firstIndex(where: { $0.id == item.id }) {
-                        downloadManager.downloadItems.remove(at: index)
-                    }
+            
+            withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
+                if let index = downloadManager.downloadItems.firstIndex(where: { $0.id == item.id }) {
+                    downloadManager.downloadItems.remove(at: index)
                 }
             }
         } catch {
