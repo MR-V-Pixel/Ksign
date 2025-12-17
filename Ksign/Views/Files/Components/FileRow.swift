@@ -53,7 +53,6 @@ struct FileRow: View {
         self.onNavigateToDirectory = onNavigateToDirectory
     }
     
-    @State private var isHovering = false
     @State private var showingConfirmationDialog = false
     
     var body: some View {
@@ -138,13 +137,6 @@ struct FileRow: View {
         }
         .padding(.vertical, 6)
         .contentShape(Rectangle())
-        .background(
-            RoundedRectangle(cornerRadius: 8)
-                .fill(isHovering ? Color.gray.opacity(0.1) : Color.clear)
-        )
-        .onHover { hovering in
-            isHovering = hovering
-        }
         .onTapGesture {
             if viewModel.isEditMode == .active {
                 if viewModel.selectedItems.contains(file) {

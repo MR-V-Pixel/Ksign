@@ -22,8 +22,6 @@ class WebViewCoordinator: NSObject, WKNavigationDelegate, WKUIDelegate {
             return
         }
         
-        print("Navigation to: \(url.absoluteString)")
-        
         if handleSpecialURL(url) {
             decisionHandler(.cancel)
             return

@@ -194,7 +194,6 @@ struct FilesView: View {
                 .swipeActions(edge: .trailing) {
                     swipeActions(for: file)
                 }
-                .listRowBackground(selectionBackground(for: file))
                 .compatMatchedTransitionSource(id: file.url.absoluteString, ns: _namespace)
             }
         }
@@ -435,10 +434,6 @@ struct FilesView: View {
 
     
     // MARK: - UI Helpers
-    
-    private func selectionBackground(for file: FileItem) -> some View {
-        FileUIHelpers.selectionBackground(for: file, selectedItems: viewModel.selectedItems)
-    }
     
     @ViewBuilder
     private func swipeActions(for file: FileItem) -> some View {

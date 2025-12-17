@@ -10,7 +10,26 @@ import SwiftUI
 // Download Item Row
 struct DownloadItemRow: View {
     let item: DownloadItem
-    var onTap: (DownloadItem) -> Void
+    @Binding var shareItems: [Any]
+    var importIpaToLibrary: (DownloadItem) -> Void
+    var exportToFiles: (DownloadItem) -> Void
+    var deleteItem: (DownloadItem) -> Void
+
+    @State private var showingConfirmationDialog = false
+
+    init(
+        item: DownloadItem,
+        shareItems: Binding<[Any]>,
+        importIpaToLibrary: @escaping (DownloadItem) -> Void,
+        exportToFiles: @escaping (DownloadItem) -> Void,
+        deleteItem: @escaping (DownloadItem) -> Void
+    ) {
+        self.item = item
+        self._shareItems = shareItems
+        self.importIpaToLibrary = importIpaToLibrary
+        self.exportToFiles = exportToFiles
+        self.deleteItem = deleteItem
+    }
     
     var body: some View {
         HStack(spacing: 12) {
@@ -44,8 +63,46 @@ struct DownloadItemRow: View {
             if item.isFinished {
                 let generator = UIImpactFeedbackGenerator(style: .light)
                 generator.impactOccurred()
-                onTap(item)
+                showingConfirmationDialog = true
             }
+        }
+        .confirmationDialog(
+            item.title,
+            isPresented: $showingConfirmationDialog,
+            titleVisibility: .visible
+        ) {
+            fileConfirmationDialogButtons()
+        }
+        .contextMenu {
+            fileConfirmationDialogButtons()
+        }
+    }
+    
+    @ViewBuilder
+    private func fileConfirmationDialogButtons() -> some View {
+        Button {
+            shareItems = [item.localPath]
+            UIActivityViewController.show(activityItems: shareItems)
+        } label: {
+            Label(.localized("Share"), systemImage: "square.and.arrow.up")
+        }
+        
+        Button {
+            importIpaToLibrary(item)
+        } label: {
+            Label(.localized("Import to Library"), systemImage: "square.grid.2x2.fill")
+        }
+        
+        Button {
+            exportToFiles(item)
+        } label: {
+            Label(.localized("Export to Files App"), systemImage: "square.and.arrow.up.fill")
+        }
+        
+        Button(role: .destructive) {
+            deleteItem(item)
+        } label: {
+            Label(.localized("Delete"), systemImage: "trash")
         }
     }
 } 

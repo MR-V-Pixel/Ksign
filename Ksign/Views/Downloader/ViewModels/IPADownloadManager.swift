@@ -162,6 +162,8 @@ class IPADownloadManager: NSObject, ObservableObject {
     }
 }
 
+    // MARK: - URLSessionDownloadDelegate
+
 extension IPADownloadManager: URLSessionDownloadDelegate {
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
         let fileManager = FileManager.default

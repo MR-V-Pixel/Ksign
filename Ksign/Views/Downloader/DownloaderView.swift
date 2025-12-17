@@ -15,7 +15,6 @@ struct DownloaderView: View {
     @StateObject private var libraryManager = DownloadManager.shared
     
     @State private var selectedItem: DownloadItem?
-    @State private var showActionSheet = false
     @State private var webViewURL: URL?
     @State private var shareItems: [Any] = []
     @State private var showDocumentPicker = false
@@ -34,10 +33,13 @@ struct DownloaderView: View {
         NBNavigationView("IPA Downloads") {
             List {
                 ForEach(filteredDownloadItems) { item in
-                    DownloadItemRow(item: item) { tappedItem in
-                        selectedItem = tappedItem
-                        showActionSheet = true
-                    }
+                    DownloadItemRow(
+                        item: item,
+                        shareItems: $shareItems,
+                        importIpaToLibrary: { item in importIpaToLibrary(item) },
+                        exportToFiles: { item in exportToFiles(item) },
+                        deleteItem: { item in deleteItem(item) }
+                    )
                 }
             }
             .listStyle(.plain)
@@ -70,9 +72,6 @@ struct DownloaderView: View {
             }
             .onAppear {
                 downloadManager.loadDownloadedIPAs()
-            }
-            .confirmationDialog(.localized("Choose an action"), isPresented: $showActionSheet, titleVisibility: .visible) {
-                actionSheetContent
             }
             .fullScreenCover(item: $webViewURL) { url in
                 webViewSheet(url: url)

@@ -9,15 +9,6 @@ import SwiftUI
 
 struct FileUIHelpers {
     
-    // MARK: - Selection Background
-    
-    static func selectionBackground(for file: FileItem, selectedItems: Set<FileItem>) -> some View {
-        RoundedRectangle(cornerRadius: 0)
-            .fill(selectedItems.contains(file) ? .accentColor.opacity(0.1) : Color.clear)
-            .padding(.horizontal, 4)
-            .animation(.spring(response: 0.2, dampingFraction: 0.7), value: selectedItems.contains(file))
-    }
-    
     // MARK: - Swipe Actions
     
     @ViewBuilder
