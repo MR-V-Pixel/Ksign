@@ -31,7 +31,7 @@ struct DownloaderView: View {
     }
 
     var body: some View {
-        NBNavigationView("Downloads") {
+        NBNavigationView(.localized("Downloads")) {
             List {
                 if !libraryManager.downloads.isEmpty || !downloadManager.activeItems.isEmpty {
                     NBSection(.localized("Downloading"), secondary: (libraryManager.downloads.count + downloadManager.activeItems.count).description) {

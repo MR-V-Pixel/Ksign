@@ -145,6 +145,12 @@ struct DownloadItemRow: View {
         } label: {
             Label(.localized("Delete"), systemImage: "trash")
         }
+
+        Button(role: .cancel) {
+            importIpaToLibrary(item)
+        } label: {
+            Label(.localized("Import"), systemImage: "square.grid.2x2.fill")
+        }
     }
 }
 
