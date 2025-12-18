@@ -93,6 +93,9 @@ struct DownloaderView: View {
             .onChange(of: libraryManager.downloads.count) { _ in
                 downloadManager.loadDownloadedIPAs()
             }
+            .onChange(of: downloadManager.activeItems.count) { _ in
+                downloadManager.loadDownloadedIPAs()
+            }
             .fullScreenCover(item: $webViewURL) { url in
                 webViewSheet(url: url)
             }
@@ -227,6 +230,11 @@ private extension DownloaderView {
     }
     
     func deleteItem(_ item: DownloadItem) {
+        if !item.isFinished {
+            downloadManager.cancelDownload(item)
+            return
+        }
+        
         do {
             try FileManager.default.removeItem(at: item.localPath)
             

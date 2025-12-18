@@ -111,6 +111,16 @@ class IPADownloadManager: NSObject, ObservableObject {
     }
     
     
+    func cancelDownload(_ item: DownloadItem) {
+        urlSession.getAllTasks { tasks in
+            if let task = tasks.first(where: { task in
+                self.activeDownloads[task.taskIdentifier] == item.id.uuidString
+            }) {
+                task.cancel()
+            }
+        }
+    }
+    
     func handleITMSServicesURL(_ url: URL, completion: @escaping (Result<String, Error>) -> Void) {
         guard let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
               let queryItems = components.queryItems,

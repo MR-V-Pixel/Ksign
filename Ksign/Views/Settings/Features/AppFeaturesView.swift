@@ -38,6 +38,13 @@ struct AppFeaturesView: View {
             } footer: {
                 Text(.localized("This will notify you when the download is completed."))
             }
+            Section {
+                Toggle(isOn: $_optionsManager.options.saveAppStoreDownloadsToDownloadsFolder) {
+                    Label(.localized("Save App Store downloads to Downloads folder"), systemImage: "square.and.arrow.down.fill")
+                }
+            } footer: {
+                Text(.localized("This will save the App Store downloads to the Downloads folder, turning this off will help reduce disk usage."))
+            }
         }
         .onChange(of: _optionsManager.options) { _ in
             _optionsManager.saveOptions()

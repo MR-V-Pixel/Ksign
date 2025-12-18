@@ -207,7 +207,13 @@ extension DownloadManager: URLSessionDownloadDelegate {
 	func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
 		guard let download = getDownloadTask(by: downloadTask) else { return }
 		
-		let downloadDir = URL.documentsDirectory.appendingPathComponent("Downloads")
+		var downloadDir: URL
+		if !OptionsManager.shared.options.saveAppStoreDownloadsToDownloadsFolder {
+			let tempDirectory = FileManager.default.temporaryDirectory
+			downloadDir = tempDirectory.appendingPathComponent("FeatherDownloads", isDirectory: true)
+		} else {
+			downloadDir = URL.documentsDirectory.appendingPathComponent("Downloads")
+		}
 		
 		do {
 			try FileManager.default.createDirectoryIfNeeded(at: downloadDir)

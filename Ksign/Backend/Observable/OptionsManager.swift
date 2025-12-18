@@ -113,6 +113,8 @@ struct Options: Codable, Equatable {
 	/// prefix/suffix
 	var prefix: String?
 	var suffix: String?
+	/// Also save app store downloads to the Downloads folder
+	var saveAppStoreDownloadsToDownloadsFolder: Bool
 	// default
 	static let defaultOptions = Options(
 		appAppearance: "Default",
@@ -146,7 +148,8 @@ struct Options: Codable, Equatable {
         signingLogs: false,
         notifications: false,
         prefix: nil,
-        suffix: nil
+        suffix: nil,
+        saveAppStoreDownloadsToDownloadsFolder: true
 	)
 	// extraction library values
 	static let extractionLibraryValues = ["Zip", "ZIPFoundation"]

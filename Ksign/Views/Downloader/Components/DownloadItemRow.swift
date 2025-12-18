@@ -72,6 +72,17 @@ struct DownloadItemRow: View {
             }
             
             Spacer()
+            
+            if !item.isFinished {
+                Button {
+                    deleteItem(item)
+                } label: {
+                    Image(systemName: "stop.circle")
+                        .font(.system(size: 32))
+                        .foregroundColor(.accentColor)
+                }
+                .buttonStyle(.plain)
+            }
         }
         .padding(.vertical, 6)
         .contentShape(Rectangle())
@@ -173,6 +184,16 @@ struct AppStoreDownloadItemRow: View {
             }
             
             Spacer()
+            if download.unpackageProgress == 0 {
+                Button {
+                    DownloadManager.shared.cancelDownload(download)
+                } label: {
+                    Image(systemName: "stop.circle")
+                        .font(.system(size: 32))
+                        .foregroundColor(.accentColor)
+                }
+                .buttonStyle(.plain)
+            }
         }
         .padding(.vertical, 6)
         .contentShape(Rectangle())
