@@ -242,6 +242,15 @@ struct LibraryView: View {
 				}
 			}
         }
+        .onChange(of: _isEditMode) { state in
+            if !state.isEditing {
+                DispatchQueue.main.asyncAfter(deadline: .now()) {
+                    withAnimation{
+                        _selectedApps.removeAll()
+                    }
+                }
+            }
+        }
     }
 }
 
