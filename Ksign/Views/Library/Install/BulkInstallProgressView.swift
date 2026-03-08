@@ -7,6 +7,7 @@
 
 import SwiftUI
 import NimbleViews
+import IDeviceSwift
 
 struct BulkInstallProgressView: View {
     var app: AppInfoPresentable
