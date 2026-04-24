@@ -446,7 +446,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%lld thư viện hệ thống bắt buộc không được hiển thị"
+            "value" : "Không hiển thị những %lld thư viện hệ thống bắt buộc"
           }
         }
       }
@@ -860,7 +860,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ký Adhoc"
+            "value" : "Ký Ad-Hoc"
           }
         }
       }
@@ -942,7 +942,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tính năng cài đặt nâng cao"
+            "value" : "Phương pháp cài đặt nâng cao"
           }
         }
       }
@@ -1107,7 +1107,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tất cả kho lưu trữ"
+            "value" : "Tất cả kho ứng dụng"
           }
         }
       }
@@ -1249,7 +1249,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lỗi không xác định"
+            "value" : "Mội lỗi không xác định đã xảy ra"
           }
         }
       }
@@ -1578,7 +1578,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mật khẩu không đúng"
+            "value" : "Mật khẩu sai"
           }
         }
       }
@@ -1696,7 +1696,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bundle"
+            "value" : "Gói"
           }
         }
       }
@@ -2075,7 +2075,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Chọn từ Ảnh"
+            "value" : "Chọn từ Thư viện"
           }
         }
       }
@@ -2358,7 +2358,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bản quyền"
+            "value" : "Bản quyền & tác giả"
           }
         }
       }
@@ -3027,66 +3027,65 @@
         }
       }
     },
-    "Download StosVPN" : {
-      "comment" : "StosVPN was taken down from the AppStore, here i'm referring to sidestore's alternative vpn",
+    "Download LocalDevVPN" : {
+      "comment" : "StosVPN was taken down from the AppStore, here i'm referring to SideStore's alternative VPN",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "تنزيل StosVPN"
+            "state" : "needs_review",
+            "value" : "تنزيل LocalDevVPN"
           }
         },
         "cs" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Stáhnout Stosvpn"
+            "state" : "needs_review",
+            "value" : "Stáhnout LocalDevVPN"
           }
         },
         "de" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Lade LocalDevVPN Herunter"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Download StosVPN"
+            "value" : "Download LocalDevVPN"
           }
         },
         "es" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Descargar stosvpn"
+            "state" : "needs_review",
+            "value" : "Descargar LocalDevVPN"
           }
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Télécharger STOSVPN"
+            "state" : "needs_review",
+            "value" : "Télécharger LocalDevVPN"
           }
         },
         "ru" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Скачать Stosvpn"
+            "state" : "needs_review",
+            "value" : "Скачать LocalDevVPN"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "STOSVPN'i indir"
+            "state" : "needs_review",
+            "value" : "LocalDevVPN'i indir"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tải xuống stosvpn"
+            "value" : "Tải xuống LocalDevVPN"
           }
         }
-      },
-      "shouldTranslate" : false
+      }
     },
     "Downloaded" : {
       "extractionState" : "manual",
@@ -3129,7 +3128,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ứng dụng đã tải"
+            "value" : "Ứng dụng đã tải về"
           }
         }
       }
@@ -3152,7 +3151,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Đang tải"
+            "value" : "Đang tải xuống"
           }
         }
       }
@@ -3285,7 +3284,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Điều chỉnh giá trị"
+            "value" : "Sửa đổi giá trị"
           }
         }
       }
@@ -3329,7 +3328,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Danh sách trống"
+            "value" : ".plist trống"
           }
         }
       }
@@ -3411,7 +3410,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bật bất kỳ biện pháp bảo vệ nào sẽ thêm một chuỗi ngẫu nhiên vào bundleidentifiers của các ứng dụng bạn ký, điều này để đảm bảo Apple ID của bạn không bị Apple gắn cờ. Tuy nhiên, khi sử dụng dịch vụ ký, bạn có thể bỏ qua điều này."
+            "value" : "Việc sử dụng bất kỳ biện pháp bảo vệ nào sẽ thêm một chuỗi ngẫu nhiên vào bundleidentifiers của các ứng dụng bạn ký, điều này để đảm bảo Apple ID của bạn không bị Apple đánh dấu. Tuy nhiên, khi sử dụng dịch vụ ký, bạn có thể bỏ qua điều này."
           }
         }
       }
@@ -3703,7 +3702,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nhập URL của webside chứa file IPA"
+            "value" : "Nhập URL của website chứa tệp IPA"
           }
         }
       }
@@ -4083,7 +4082,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hết hạn"
+            "value" : "Đã hết hạn"
           }
         }
       }
@@ -4224,7 +4223,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Xuất ra Tệp"
+            "value" : "Xuất ra ứng dụng Tệp"
           }
         }
       }
@@ -4351,7 +4350,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tải xuống thất bại, hãy kiểm tra kết nối internet của bạn và thử lại."
+            "value" : "Tải xuống thất bại, vui lòng kiểm tra kết nối internet của bạn và thử lại."
           }
         }
       }
@@ -4397,7 +4396,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lỗi khi nén thành IPA: %@"
+            "value" : "Lỗi khi đóng gói IPA: %@"
           }
         }
       }
@@ -4502,7 +4501,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Giải nén thành công"
+            "value" : "Giải nén tệp thành công"
           }
         }
       }
@@ -4525,7 +4524,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lỗi khi nhập: %@"
+            "value" : "Lỗi khi nhập tệp: %@"
           }
         }
       }
@@ -4554,7 +4553,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tên mục"
+            "value" : "Tên tệp"
           }
         }
       }
@@ -4938,7 +4937,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Frameworks & PlugIns"
+            "value" : "Frameworks & Plugins"
           }
         }
       }
@@ -5138,7 +5137,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nhận quyền truy cập vào Discord riêng của chúng tôi bằng cách quyên góp, nơi chúng tôi thảo luận về các bản cập nhật tương lai, phiên bản beta và các cách tiềm năng để cải thiện trải nghiệm của bạn."
+            "value" : "Nhận quyền truy cập vào Discord riêng của chúng tôi bằng cách ủng hộ, nơi chúng tôi thảo luận về các bản cập nhật tương lai, phiên bản beta và các cách tiềm năng để cải thiện trải nghiệm của bạn."
           }
         }
       }
@@ -5244,7 +5243,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bắt đầu bằng cách nhập file đầu tiên của bạn."
+            "value" : "Bắt đầu bằng cách nhập tệp đầu tiên của bạn."
           }
         }
       }
@@ -5267,7 +5266,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bắt đầu bằng cách nhập IPA đầu tiên của bạn."
+            "value" : "Bắt đầu bằng cách nhập tệp IPA đầu tiên của bạn."
           }
         }
       }
@@ -6516,7 +6515,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kiểu cài đặt"
+            "value" : "Phương thức cài đặt"
           }
         }
       }
@@ -6823,7 +6822,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Trùng App ID của chứng chỉ"
+            "value" : "Sử dụng App ID (mã định danh app) của chứng chỉ"
           }
         }
       }
@@ -7250,7 +7249,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mục chữ mới"
+            "value" : "Tệp văn bản mới"
           }
         }
       }
@@ -7460,7 +7459,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Chưa chọn file nào"
+            "value" : "Chưa chọn tệp nào"
           }
         }
       }
@@ -7571,7 +7570,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Không có Tweak"
+            "value" : "Không có điều chỉnh"
           }
         }
       }
@@ -8029,7 +8028,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Đóng gói IPA"
+            "value" : "Đóng gói thành IPA"
           }
         }
       }
@@ -8429,7 +8428,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Chỉnh sửa Plist"
+            "value" : "Bộ chỉnh sửa Plist"
           }
         }
       }
@@ -8617,7 +8616,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Phiên bản trước"
+            "value" : "Phiên bản trước đó"
           }
         }
       }
@@ -9114,7 +9113,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Xóa tệp Provisioning"
+            "value" : "Loại bỏ tệp Provisioning"
           }
         }
       }
@@ -9173,7 +9172,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Xóa thiết bị được hỗ trợ"
+            "value" : "Loại bỏ thiết bị được hỗ trợ"
           }
         }
       }
@@ -9291,7 +9290,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Xóa URL Scheme"
+            "value" : "Loại bỏ URL Scheme"
           }
         }
       }
@@ -9407,7 +9406,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Đổi tên file"
+            "value" : "Đổi tên tệp"
           }
         }
       }
@@ -9631,7 +9630,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Đặt lại tất cả"
+            "value" : "Đặt lại tất cả cài đặt"
           }
         }
       }
@@ -9679,7 +9678,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Đặt lại ứng dụng đã tải"
+            "value" : "Đặt lại ứng dụng đã nhập"
           }
         }
       }
@@ -9701,7 +9700,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Đặt lại bộ nhớ mềm mạng"
+            "value" : "Đặt lại bộ nhớ đệm mạng"
           }
         }
       }
@@ -9796,7 +9795,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Đặt lại nguồn ứng dụng, chứng chì, ứng dụng và vài thứ nữa."
+            "value" : "Đặt lại kho ứng dụng, chứng chỉ, app, và những thứ khác."
           }
         }
       }
@@ -9844,7 +9843,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Đặt lại nguồn ứng dụng, chứng chỉ, ứng dụng và nội dung chung."
+            "value" : "Đặt lại kho ứng dụng, chứng chỉ, app, và những thứ khác."
           }
         }
       }
@@ -9868,7 +9867,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Đặt lại bộ nhớ mềm công việc"
+            "value" : "Đặt lại bộ nhớ đệm hoạt động"
           }
         }
       }
@@ -10089,7 +10088,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lưu tải về từ App Store vào mục Tải về"
+            "value" : "Lưu mục tải về từ App Store vào mục Tải xuống"
           }
         }
       }
@@ -10171,7 +10170,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Xem tất cả ứng dụng từ các nguồn của bạn"
+            "value" : "Xem tất cả ứng dụng từ các nguồn hiện có"
           }
         }
       }
@@ -10790,7 +10789,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Thể hiện sự ủng hộ của bạn"
+            "value" : "Bày tỏ sự ủng hộ của bạn"
           }
         }
       }
@@ -10849,7 +10848,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Thể hiện sự ủng hộ của bạn bằng cách quyên góp! Nếu bạn không thể quyên góp, việc chia sẻ cho người khác biết cũng có tác dụng!"
+            "value" : "Bày tỏ sự ủng hộ của bạn bằng cách quyên góp! Nếu bạn không thể quyên góp, việc chia sẻ cho người khác biết cũng có tác dụng!"
           }
         }
       }
@@ -11700,7 +11699,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kẹt? Kiểm tra xem bạn đã thêm nguồn nào chưa."
+            "value" : "Không hoạt động? Kiểm tra xem bạn đã thêm nguồn nào chưa."
           }
         }
       }
@@ -11834,7 +11833,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Thành công đóng gói %1$@ thành %2$@"
+            "value" : "Đã đóng gói %1$@ thành %2$@ thành công"
           }
         }
       }
@@ -12197,7 +12196,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Những thay đổi này yêu cầu khởi động lại ứng dụng"
+            "value" : "Bạn cần khởi động lại ứng dụng sau khi thực hiện những thay đổi này"
           }
         }
       }
@@ -12220,7 +12219,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cái này sẽ bật liqid glass cho Ksign, yêu cầu khởi động lại app"
+            "value" : "Cái này sẽ bật hiệu ứng Liquid Glass cho Ksign, yêu cầu khởi động lại app"
           }
         }
       }
@@ -12243,7 +12242,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lựa chọn này sẽ bắt app sử dụng liquid glass trên iOS 26, tuy nhiên vài app có thể sẽ không hoạt động nếu framework khác nhau."
+            "value" : "Lựa chọn này sẽ ép ứng dụng sử dụng Liquid Glass trên iOS 26, tuy nhiên vài app có thể sẽ không hoạt động nếu framework khác nhau."
           }
         }
       }
@@ -12265,7 +12264,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "File plist này không có mục nào cả"
+            "value" : "Tệp plist này không có mục nào cả"
           }
         }
       }
@@ -12288,7 +12287,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bật sẽ giúp cho ứng dụng chạy nền khi bạn đóng ứng dụng, hữu ích khi tải hoặc cài app"
+            "value" : "Bật sẽ giúp cho ứng dụng chạy nền khi bạn đóng ứng dụng, hữu ích khi đang tải tệp hoặc đang cài đặt IPA"
           }
         }
       }
@@ -12311,7 +12310,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cái này sẽ gửi thông báo khi tải về trong nền hoàn tất."
+            "value" : "Mục này sẽ gửi thông báo khi tải về trong nền hoàn tất."
           }
         }
       }
@@ -12334,7 +12333,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cái này sẽ xoá ứng dụng sau khi ký (ứng dụng đã tải)"
+            "value" : "Cái này sẽ xoá ứng dụng ở mục ứng dụng đã tải sau khi ký"
           }
         }
       }
@@ -12357,7 +12356,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cái này sẽ lưu những tải về từ App Store vào thư mục tải về, tắt đi để giảm thiểu dung lượng sử dụng"
+            "value" : "Cái này sẽ lưu những mục đã tải về từ App Store vào thư mục tải về, tắt mục này có thể giúp giảm thiểu dung lượng sử dụng"
           }
         }
       }
@@ -12439,7 +12438,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bật hiển thị bảng sẽ hiện một bảng chia sẻ sau khi xuất vào tệp của bạn."
+            "value" : "Việc bật hiển thị bảng sẽ hiện một bảng chia sẻ sau khi xuất tệp của bạn."
           }
         }
       }
@@ -12558,7 +12557,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tweaks"
+            "value" : "Tinh chỉnh"
           }
         }
       },
@@ -12858,7 +12857,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sử dụng vị trí cuối"
+            "value" : "Sử dụng địa chỉ cuối"
           }
         }
       }
@@ -13208,7 +13207,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Trời! có gì đó xảy ra khi cố gắng giải nén file. Có lẽ hãy thử thay đổi thư viện giải nén trong phần cài đặt?"
+            "value" : "Ối! Có vấn đề khi cố gắng giải nén file. Thử thay đổi thư viện giải nén trong phần cài đặt xem?"
           }
         }
       }
