@@ -25,21 +25,22 @@ struct SigningPropertiesView: View {
 	
 	// MARK: Body
 	var body: some View {
-		NBList(title) {
-			TextField(initialValue, text: $text)
-				.textInputAutocapitalization(.none)
-            
-            Section {
-                Button {
-                    text = certAppId ?? ""
-                } label: {
-                    Text(.localized("Matching Certificate's App ID"))
+        NBList(title) {
+            TextField(initialValue, text: $text)
+                .textInputAutocapitalization(.none)
+            if certAppId != nil {
+                Section {
+                    Button {
+                        text = certAppId ?? ""
+                    } label: {
+                        Text(.localized("Matching Certificate's App ID"))
+                    }
+                    .disabled(certAppId == nil)
+                } footer: {
+                    Text(.localized("Use certiticate's app ID, this will help the app have access to features that uses certificate's entitlements."))
                 }
-                .disabled(certAppId == nil)
-            } footer: {
-                Text(.localized("Use certiticate's app ID, this will help the app have access to features that uses certificate's entitlements."))
             }
-		}
+        }
 		.toolbar {
 			NBToolbarButton(
 				.localized("Save"),
