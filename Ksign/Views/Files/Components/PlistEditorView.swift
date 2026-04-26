@@ -38,7 +38,7 @@ struct PlistEditorView: View {
                 _saveEditedValue()
             }
         } message: { item in
-            Text(.localized("Edit value for key: %@", arguments: item.key))
+            Text(verbatim: .localized("Edit value for key: %@", arguments: item.key))
         }
     }
     
