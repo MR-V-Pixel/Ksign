@@ -9,6 +9,8 @@ jobs:
   build:
     name: Build Beta
     runs-on: macos-26
+    env:
+      DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
 
     steps:
       - name: Checkout Code
@@ -51,9 +53,7 @@ jobs:
             --target ${{ github.sha }}
 
       - name: Notify Discord
-        if: ${{ secrets.DISCORD_WEBHOOK != '' }}
-        env:
-          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        if: ${{ env.DISCORD_WEBHOOK != '' }}
         run: |
           COMMIT_MSG=$(git log -1 --pretty=%B)
           
