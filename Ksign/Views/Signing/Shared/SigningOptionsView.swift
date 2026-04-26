@@ -84,13 +84,13 @@ struct SigningOptionsView: View {
                     temporaryValue: temporaryOptions?.itunesFileSharing
             )
             
-            _toggle("ProMotion",
+            _toggle(.localized("ProMotion"),
                     systemImage: "speedometer",
                     isOn: $options.proMotion,
                     temporaryValue: temporaryOptions?.proMotion
             )
             
-            _toggle("GameMode",
+            _toggle(.localized("GameMode"),
                     systemImage: "gamecontroller",
                     isOn: $options.gameMode,
                     temporaryValue: temporaryOptions?.gameMode

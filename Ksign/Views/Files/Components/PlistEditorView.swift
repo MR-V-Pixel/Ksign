@@ -38,7 +38,7 @@ struct PlistEditorView: View {
                 _saveEditedValue()
             }
         } message: { item in
-            Text("Edit value for key: \(item.key)")
+            Text(.localized("Edit value for key: %@", arguments: item.key))
         }
     }
     
@@ -102,7 +102,7 @@ struct PlistEditorView: View {
                         .font(.headline)
                         .fontWeight(.semibold)
                     
-                    Text("\(viewModel.plistItems.count) item\(viewModel.plistItems.count == 1 ? "" : "s")")
+                    Text(verbatim: .localized("%lld item%@", arguments: viewModel.plistItems.count, viewModel.plistItems.count == 1 ? "" : "s"))
                         .font(.caption)
                         .foregroundColor(.secondary)
                 }

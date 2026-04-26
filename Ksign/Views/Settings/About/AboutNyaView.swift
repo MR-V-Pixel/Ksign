@@ -29,7 +29,7 @@ struct AboutNyaView: View {
                         .foregroundStyle(.accent)
                     
                     HStack(spacing: 4) {
-                        Text("Version")
+                        Text(.localized("Version"))
                         Text(Bundle.main.version)
                     }
                     .font(.footnote)
@@ -38,7 +38,7 @@ struct AboutNyaView: View {
                     Button {
                         _showPatchNotes()
                     } label: {
-                        Text("Show patch notes").bg()
+                        Text(.localized("Show patch notes")).bg()
                     }
                     .font(.footnote)
                     .padding(.top, 4)
@@ -52,7 +52,7 @@ struct AboutNyaView: View {
 				_credit(name: "Nyasami", desc: "Developer", github: "nyasami")
 			}
 			
-			NBSection("Special thanks!") {
+			NBSection(.localized("Special thanks!")) {
 				Group {
 					Text(.localized("This couldn't have been done without the original Feather devs! ❤️"))
 						.foregroundStyle(.secondary)
@@ -61,10 +61,10 @@ struct AboutNyaView: View {
 				.transition(.slide)
 			}
             
-            NBSection("Acknowledgements") {
+            NBSection(.localized("Acknowledgements")) {
                 NavigationLink(destination: AboutView()) {
                     HStack {
-                        Text("About the original Feather")
+                        Text(.localized("About the original Feather"))
                         Spacer()
                     }
                 }
@@ -85,7 +85,7 @@ struct AboutNyaView: View {
 	
 	private func _showPatchNotes() {
 		UIAlertController.showAlertWithOk(
-            title: .localized("From Nyasami, Version \(Bundle.main.version)"),
+            title: .localized("From Nyasami, Version %@", arguments: Bundle.main.version),
             message: .localized("This version introduces:\n\n- Notification when finished downloading in background (you can enable in App Features settings) \n- Button that filled bundle ID with certificate's App ID\n- remove support of ksign certificate file\n- prefix / suffix for app name in signing config- refactored the IPA Downloader to just Downloads new features"),
 			isCancel: true,
 			thankYou: true
