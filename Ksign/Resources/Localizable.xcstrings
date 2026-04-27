@@ -416,7 +416,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$lld 项目%2$@"
+            "value": "%1$lld 项%2$@"
           }
         }
       }
@@ -482,7 +482,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "%lld 所需的系统动态库未显示"
+            "value": "还有 %lld 个所需系统动态库未显示"
           }
         }
       }
@@ -592,6 +592,12 @@
     "•": {
       "localizations": {
         "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "•"
+          }
+        },
+        "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "•"
@@ -879,7 +885,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "添加了调整"
+            "value": "已添加插件"
           }
         }
       }
@@ -944,7 +950,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "临时签名"
+            "value": "Ad Hoc 签名"
           }
         }
       }
@@ -1038,7 +1044,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "高级安装方法"
+            "value": "高级安装方式"
           }
         }
       }
@@ -1161,7 +1167,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "除证书之外的所有 Ksign 文件都包含在文档目录中，以下是这些文件的一些快速链接。"
+            "value": "除证书外，Ksign 的所有文件都保存在 Documents 目录中。这里提供几个常用快捷入口。"
           }
         }
       }
@@ -1227,7 +1233,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "所有仓库"
+            "value": "全部源"
           }
         }
       }
@@ -1292,7 +1298,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "备用图标"
+            "value": "替代图标"
           }
         }
       }
@@ -1641,7 +1647,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "应用程序ID名称"
+            "value": "App ID 名称"
           }
         }
       }
@@ -1698,7 +1704,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "可用的调整"
+            "value": "可用插件"
           }
         }
       }
@@ -1829,7 +1835,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "大描述"
+            "value": "长描述"
           }
         }
       }
@@ -1894,7 +1900,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "捆绑包"
+            "value": "包内容"
           }
         }
       }
@@ -2154,7 +2160,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "改变"
+            "value": "更改"
           }
         }
       }
@@ -2183,7 +2189,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "选择一个动作"
+            "value": "选择操作"
           }
         }
       }
@@ -2249,7 +2255,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "从文件中选择"
+            "value": "从“文件”中选择"
           }
         }
       }
@@ -2315,7 +2321,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "从照片中选择"
+            "value": "从“照片”中选择"
           }
         }
       }
@@ -2344,7 +2350,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "选择用于提取档案的库。对于大文件或 Zip 不起作用时，建议使用 ZIPFoundation。"
+            "value": "选择用于解压归档文件的库。处理大文件或 Zip 无法正常工作时，推荐使用 ZIPFoundation。"
           }
         }
       }
@@ -2699,7 +2705,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "定制化"
+            "value": "自定义"
           }
         }
       }
@@ -2987,7 +2993,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "描述"
+            "value": "说明"
           }
         }
       }
@@ -3072,6 +3078,12 @@
           }
         },
         "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Discord"
+          }
+        },
+        "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "Discord"
@@ -3436,7 +3448,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "下载本地开发VPN"
+            "value": "下载 LocalDevVPN"
           }
         }
       }
@@ -3765,7 +3777,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "启用液态玻璃"
+            "value": "启用 Liquid Glass"
           }
         }
       }
@@ -3830,7 +3842,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "启用任何保护都会将随机字符串附加到您签名的应用程序的捆绑包标识符中，这是为了确保您的 Apple ID 不会被 Apple 标记。但是，当使用签名服务时，您可以忽略这一点。"
+            "value": "启用任一保护选项后，系统会在已签名应用的 Bundle Identifier 后附加随机字符串，以降低 Apple 将你的 Apple ID 标记为异常的风险。如果你使用的是签名服务，则可以忽略此项。"
           }
         }
       }
@@ -3859,7 +3871,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "输入新文件夹的名称"
+            "value": "输入新文件夹名称"
           }
         }
       }
@@ -3953,7 +3965,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "输入 URL 以开始验证。"
+            "value": "输入 URL 开始验证。"
           }
         }
       }
@@ -4112,7 +4124,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "输入与私钥关联的密码。如果不需要密码，请将其留空。"
+            "value": "输入与私钥关联的密码。如果不需要密码，请留空。"
           }
         }
       }
@@ -4170,7 +4182,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "输入包含 IPA 文件的网站的 URL"
+            "value": "输入包含 IPA 文件的网站 URL"
           }
         }
       }
@@ -4199,7 +4211,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "输入包含 IPA 文件（直接安装/ITMS 服务）的网站的 URL 或 IPA 文件的 URL，支持： \n- https://example.com\n- itms-services://?url=https://example.com\n- https://example.com/app.ipa"
+            "value": "输入包含 IPA 文件的网站 URL（直接安装 / ITMS Services），或直接输入 IPA 文件 URL。支持：\n- https://example.com\n- itms-services://?url=https://example.com\n- https://example.com/app.ipa"
           }
         }
       }
@@ -4228,7 +4240,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "输入网址"
+            "value": "输入 URL"
           }
         }
       }
@@ -4257,7 +4269,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "输入网站网址"
+            "value": "输入网站 URL"
           }
         }
       }
@@ -4322,7 +4334,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "权利"
+            "value": "权限"
           }
         }
       }
@@ -4386,7 +4398,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "提取存档时出错：%@"
+            "value": "解压归档失败：%@"
           }
         }
       }
@@ -4545,7 +4557,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "现有的动态库"
+            "value": "现有动态库"
           }
         }
       }
@@ -4741,7 +4753,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "出口"
+            "value": "导出"
           }
         }
       }
@@ -4769,7 +4781,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "导出到文件应用程序"
+            "value": "导出到“文件”"
           }
         }
       }
@@ -4797,7 +4809,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "提取物"
+            "value": "解压"
           }
         }
       }
@@ -4826,7 +4838,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "提取%lld%%"
+            "value": "正在解压 %lld%%"
           }
         }
       }
@@ -4855,7 +4867,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "提取库"
+            "value": "解压库"
           }
         }
       }
@@ -4920,7 +4932,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "下载失败，请检查您的互联网连接，然后重试。"
+            "value": "下载失败，请检查网络连接后重试。"
           }
         }
       }
@@ -4949,7 +4961,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "无法导入到库：%@"
+            "value": "导入到应用库失败：%@"
           }
         }
       }
@@ -5043,7 +5055,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "特点"
+            "value": "功能"
           }
         }
       }
@@ -5101,7 +5113,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "文件提取成功"
+            "value": "文件解压成功"
           }
         }
       }
@@ -5130,7 +5142,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "文件导入错误：%@"
+            "value": "文件导入失败：%@"
           }
         }
       }
@@ -5361,7 +5373,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "筛选方式"
+            "value": "筛选依据"
           }
         }
       }
@@ -5591,7 +5603,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "框架和插件"
+            "value": "框架与插件"
           }
         }
       }
@@ -5656,7 +5668,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "完全本地化"
+            "value": "纯本地"
           }
         }
       }
@@ -5815,7 +5827,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "通过捐赠来访问我们的秘密 Discord，我们将在其中讨论未来的更新、测试版以及改善您体验的潜在方法。"
+            "value": "赞助后即可加入我们的私密 Discord，了解未来更新、测试版，以及更多改进体验的想法。"
           }
         }
       }
@@ -5910,7 +5922,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "下载你的第一个 IPA 文件，开始使用吧。"
+            "value": "下载第一个 IPA 文件即可开始使用。"
           }
         }
       }
@@ -5939,7 +5951,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "导入你的第一个文件，开始使用吧。"
+            "value": "导入第一个文件即可开始使用。"
           }
         }
       }
@@ -5968,7 +5980,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "导入你的第一个 IPA 文件，开始使用吧。"
+            "value": "导入第一个 IPA 文件即可开始使用。"
           }
         }
       }
@@ -5997,7 +6009,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "通过导入您的第一个证书开始签名。"
+            "value": "导入第一张证书即可开始签名。"
           }
         }
       }
@@ -6062,7 +6074,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "GitHub 存储库"
+            "value": "GitHub 仓库"
           }
         }
       }
@@ -6091,7 +6103,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "去"
+            "value": "前往"
           }
         }
       }
@@ -6156,7 +6168,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "心跳"
+            "value": "心跳服务"
           }
         }
       }
@@ -6544,7 +6556,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "这是高级安装方法，需要电脑，继续吗？"
+            "value": "这是需要配合电脑使用的高级安装方式，确定继续吗？"
           }
         }
       }
@@ -6702,7 +6714,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "导入证书文件 (.p12)"
+            "value": "导入证书文件"
           }
         }
       }
@@ -6998,7 +7010,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "导入配置文件"
+            "value": "导入描述文件"
           }
         }
       }
@@ -7032,7 +7044,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "导入到资源库"
+            "value": "导入到应用库"
           }
         }
       }
@@ -7126,7 +7138,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "正在导入%lld%%"
+            "value": "正在导入 %lld%%"
           }
         }
       }
@@ -7220,7 +7232,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "信息"
+            "value": "详细信息"
           }
         }
       }
@@ -7539,7 +7551,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "保持应用程序在后台运行"
+            "value": "保持应用在后台运行"
           }
         }
       }
@@ -7605,7 +7617,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "资源库"
+            "value": "应用库"
           }
         }
       }
@@ -7670,7 +7682,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "库单元外观"
+            "value": "应用库卡片样式"
           }
         }
       }
@@ -7728,7 +7740,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "匹配证书的App ID"
+            "value": "匹配证书的 App ID"
           }
         }
       }
@@ -7794,7 +7806,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "最低要求"
+            "value": "最低系统要求"
           }
         }
       }
@@ -7859,7 +7871,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "杂项"
+            "value": "其他"
           }
         }
       }
@@ -8397,7 +8409,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "无证书"
+            "value": "没有证书"
           }
         }
       }
@@ -8426,7 +8438,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "没有下载的 IPA"
+            "value": "没有已下载的 IPA"
           }
         }
       }
@@ -8555,7 +8567,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "未找到配对文件，请导入。"
+            "value": "未找到配对文件，请先导入。"
           }
         }
       }
@@ -8584,7 +8596,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "无需调整"
+            "value": "没有插件"
           }
         }
       }
@@ -8743,7 +8755,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "仅使用本地主机地址"
+            "value": "仅使用 localhost 地址"
           }
         }
       }
@@ -8873,7 +8885,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "开放档案"
+            "value": "打开归档目录"
           }
         }
       }
@@ -8938,7 +8950,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "开放证书"
+            "value": "打开证书目录"
           }
         }
       }
@@ -9003,7 +9015,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "打开文件"
+            "value": "打开 Documents 目录"
           }
         }
       }
@@ -9068,7 +9080,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "在文件中打开"
+            "value": "在“文件”中打开"
           }
         }
       }
@@ -9255,7 +9267,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "密码（如果没有则留空）"
+            "value": "密码（如无可留空）"
           }
         }
       }
@@ -9320,7 +9332,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "丸"
+            "value": "胶囊"
           }
         }
       }
@@ -9516,7 +9528,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "请转到设置并导入有效的证书"
+            "value": "请前往设置并导入有效证书"
           }
         }
       }
@@ -9609,7 +9621,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "PPQ Protection"
+            "value": "PPQ 保护"
           }
         }
       }
@@ -9668,7 +9680,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "前缀/后缀将添加到应用程序名称的前后。"
+            "value": "前缀/后缀会分别添加到应用名称前后。"
           }
         }
       }
@@ -9762,7 +9774,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "以前的版本"
+            "value": "历史版本"
           }
         }
       }
@@ -10218,7 +10230,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "获得测试版访问权限后删除此类烦人的警报！"
+            "value": "获得 Beta 访问权限后，就不会再看到这类提示了！"
           }
         }
       }
@@ -10248,7 +10260,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "签名后删除应用程序"
+            "value": "签名完成后删除原文件"
           }
         }
       }
@@ -10443,7 +10455,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "删除此警报"
+            "value": "不再显示此提醒"
           }
         }
       }
@@ -10508,7 +10520,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "删除 URL 方案"
+            "value": "移除 URL Scheme"
           }
         }
       }
@@ -10736,7 +10748,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "更换"
+            "value": "替换内容"
           }
         }
       }
@@ -10801,7 +10813,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "仓库"
+            "value": "源"
           }
         }
       }
@@ -10956,7 +10968,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "重置导入的应用程序"
+            "value": "重置已导入应用"
           }
         }
       }
@@ -11044,7 +11056,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "重置签名的应用程序"
+            "value": "重置已签名应用"
           }
         }
       }
@@ -11074,7 +11086,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "重置来源"
+            "value": "重置源"
           }
         }
       }
@@ -11103,7 +11115,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "重置应用程序源、证书、应用程序和常规内容。"
+            "value": "重置应用的源、证书、应用数据和通用内容。"
           }
         }
       }
@@ -11133,7 +11145,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Reset the applications sources, certificates, apps, and general contents"
+            "value": "重置应用的源、证书、应用数据和通用内容"
           }
         }
       }
@@ -11163,7 +11175,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "重置应用程序源、证书、应用程序和常规内容。"
+            "value": "重置应用的源、证书、应用数据和通用内容。"
           }
         }
       }
@@ -11258,7 +11270,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "重启心跳"
+            "value": "重启心跳服务"
           }
         }
       }
@@ -11351,7 +11363,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "根词典"
+            "value": "根字典"
           }
         }
       }
@@ -11538,7 +11550,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "查看来自您来源的所有应用程序"
+            "value": "查看来自各个源的所有应用"
           }
         }
       }
@@ -11603,7 +11615,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "看来您已经掌握了配对文件！"
+            "value": "看起来你已经拿到配对文件了。"
           }
         }
       }
@@ -11698,7 +11710,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Select Alternative Icon"
+            "value": "选择替代图标"
           }
         }
       }
@@ -11764,7 +11776,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Select entitlements file"
+            "value": "选择权限文件"
           }
         }
       }
@@ -11829,7 +11841,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Semi Local"
+            "value": "半本地"
           }
         }
       }
@@ -11859,7 +11871,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Server (Recommended):\n使用本地托管服务器和 itms-services:// 安装应用程序。\n\nIDevice (advanced):\n使用 VPN 和配对文件。写入 AFC 并手动调用 installd，同时使用回调监控安装进度\n优点：非常可靠，不需要 SSL 证书或外部托管服务器。相反，其工作原理与计算机类似。"
+            "value": "服务器（推荐）：\n使用本地托管的服务器和 itms-services:// 安装应用。\n\niDevice（高级）：\n使用 VPN 和配对文件。它会写入 AFC，并手动调用 installd，再通过回调监控安装进度。\n优点：稳定性很高，不需要 SSL 证书或外部托管服务器，整体体验更接近电脑端安装。"
           }
         }
       }
@@ -11924,7 +11936,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Server & SSL"
+            "value": "服务器与 SSL"
           }
         }
       }
@@ -12053,7 +12065,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Show Dylibs"
+            "value": "显示动态库"
           }
         }
       }
@@ -12082,7 +12094,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Show logs when signing"
+            "value": "签名时显示日志"
           }
         }
       }
@@ -12110,7 +12122,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Show patch notes"
+            "value": "查看更新说明"
           }
         }
       }
@@ -12176,7 +12188,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "导出时显示工作表"
+            "value": "导出后显示分享菜单"
           }
         }
       }
@@ -12241,7 +12253,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Show Your Support"
+            "value": "支持我们"
           }
         }
       }
@@ -12306,7 +12318,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "通过捐赠来表达您的支持！如果您无法捐款，传播信息也能起到作用！"
+            "value": "欢迎通过赞助支持我们；如果暂时无法赞助，帮忙传播也很有帮助。"
           }
         }
       }
@@ -12371,7 +12383,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "标志"
+            "value": "签名"
           }
         }
       }
@@ -12400,7 +12412,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sign & Install"
+            "value": "签名并安装"
           }
         }
       }
@@ -12688,7 +12700,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "源"
+            "value": "来源"
           }
         }
       }
@@ -12753,7 +12765,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "源仓库 URL"
+            "value": "源地址 URL"
           }
         }
       }
@@ -13078,7 +13090,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Start Signing"
+            "value": "开始签名"
           }
         }
       }
@@ -13143,7 +13155,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Store Cell Appearance"
+            "value": "源列表卡片样式"
           }
         }
       }
@@ -13265,7 +13277,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "卡住？检查您是否添加了任何来源。"
+            "value": "不知道从哪开始？先看看是否已经添加了源。"
           }
         }
       }
@@ -13388,7 +13400,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "成功将 %@ 导入到库中"
+            "value": "已成功将 %@ 导入应用库"
           }
         }
       }
@@ -13423,7 +13435,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "成功将%1$@打包为%2$@"
+            "value": "已成功将 %@ 打包为 %@"
           }
         }
       }
@@ -13517,7 +13529,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "支持从 KravaSign/MapleSign 和 ESign 导入"
+            "value": "支持从 KravaSign / MapleSign / ESign 导入"
           }
         }
       }
@@ -13546,7 +13558,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Switch Back"
+            "value": "切回推荐方式"
           }
         }
       }
@@ -13611,7 +13623,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Team Identifiers"
+            "value": "团队标识符"
           }
         }
       }
@@ -13769,7 +13781,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "心跳在后台激活，当应用程序重新打开或出现提示时，心跳会重新启动。如果下面的状态呈脉冲状，则表示其健康。"
+            "value": "心跳服务会在后台运行；当你重新打开应用或手动触发时会重新启动。下方状态如果在脉动，说明运行正常。"
           }
         }
       }
@@ -13863,7 +13875,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "这将为该应用程序启用液态玻璃，这需要重新启动应用程序才能生效。"
+            "value": "为该应用启用 Liquid Glass，需重启应用后生效。"
           }
         }
       }
@@ -13892,7 +13904,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "此选项强制转换应用程序尝试使用 iOS 26 引入的新液体玻璃重新设计，由于框架不同，这可能不适用于所有应用程序。"
+            "value": "尝试为应用启用 iOS 26 引入的 Liquid Glass 新设计。由于各应用使用的框架不同，未必都能生效。"
           }
         }
       }
@@ -13920,7 +13932,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "此属性列表不包含任何项目"
+            "value": "这个属性列表没有任何项目。"
           }
         }
       }
@@ -13949,7 +13961,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "即使您关闭应用程序，这也会使应用程序保持运行，有助于下载或安装 ipa。"
+            "value": "即使关闭应用，也会尽量保持其在后台运行，有助于下载或安装 IPA。"
           }
         }
       }
@@ -13978,7 +13990,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "下载完成后，这将通知您。"
+            "value": "下载完成时发送通知。"
           }
         }
       }
@@ -14007,7 +14019,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "这将在签名后删除应用程序（下载的应用程序）"
+            "value": "签名完成后会删除原始应用文件（仅限“已下载”中的应用）。"
           }
         }
       }
@@ -14036,7 +14048,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "这会将 App Store 下载保存到“下载”文件夹中，关闭此功能将有助于减少磁盘使用量。"
+            "value": "开启后会将 App Store 下载内容保存到 Downloads 文件夹；关闭可减少磁盘占用。"
           }
         }
       }
@@ -14065,7 +14077,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "当您开始签名时，这将显示签名过程的日志。"
+            "value": "开始签名时显示签名过程日志。"
           }
         }
       }
@@ -14130,7 +14142,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "切换显示表将在导出到文件后显示共享表。"
+            "value": "开启后，导出到文件时会额外弹出分享菜单。"
           }
         }
       }
@@ -14256,6 +14268,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Tinh chỉnh"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "插件"
           }
         }
       },
@@ -14479,7 +14497,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "已更新"
+            "value": "更新日期"
           }
         }
       }
@@ -14540,6 +14558,12 @@
             "state": "translated",
             "value": "URL"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
         }
       },
       "shouldTranslate": false
@@ -14568,7 +14592,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "使用证书的应用程序 ID，这将帮助应用程序访问使用证书权利的功能。"
+            "value": "使用证书的 App ID，这有助于让应用获得证书所包含的权限功能。"
           }
         }
       }
@@ -14597,7 +14621,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "使用上次复制的位置"
+            "value": "记住上次复制位置"
           }
         }
       }
@@ -14755,7 +14779,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "查看权利"
+            "value": "查看权限"
           }
         }
       }
@@ -14849,7 +14873,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "访问帕特隆"
+            "value": "访问 Patreon"
           }
         }
       }
@@ -14972,7 +14996,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "是否记住文件复制/移动到的最后位置或使用 Ksign 的文档文件夹作为默认值。"
+            "value": "决定是记住上次复制/移动的位置，还是默认使用 Ksign 的 Documents 目录。"
           }
         }
       }
@@ -15001,7 +15025,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "糟糕！解压文件时出现问题。 \n也许尝试在设置中切换提取库？"
+            "value": "解压文件时出了点问题。\n可以尝试在设置中切换解压库。"
           }
         }
       }
@@ -15029,7 +15053,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你有未保存的更改。要在关闭前保存吗？"
+            "value": "你有尚未保存的更改，关闭前要先保存吗？"
           }
         }
       }
@@ -15080,7 +15104,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "所有源都复制到剪贴板。"
+            "value": "已将所有源地址复制到剪贴板。"
           }
         }
       }
@@ -15097,7 +15121,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "可用图标"
+            "value": "可选图标"
           }
         }
       }
@@ -15148,7 +15172,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "类别"
+            "value": "分类"
           }
         }
       }
@@ -15165,7 +15189,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "樱桃"
+            "value": "樱桃红"
           }
         }
       }
@@ -15182,7 +15206,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "复制下载地址"
+            "value": "复制下载链接"
           }
         }
       }
@@ -15199,7 +15223,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "复制下载网址"
+            "value": "复制下载链接"
           }
         }
       }
@@ -15233,7 +15257,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "黑暗"
+            "value": "深色"
           }
         }
       }
@@ -15250,7 +15274,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "开发商"
+            "value": "开发者"
           }
         }
       }
@@ -15267,7 +15291,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "不和谐服务器"
+            "value": "Discord 服务器"
           }
         }
       }
@@ -15301,7 +15325,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "输入新文本文件的名称"
+            "value": "输入新文本文件名称"
           }
         }
       }
@@ -15318,7 +15342,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "创建文件夹时出错：%@"
+            "value": "创建文件夹失败：%@"
           }
         }
       }
@@ -15335,7 +15359,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "创建文本文件时出错：%@"
+            "value": "创建文本文件失败：%@"
           }
         }
       }
@@ -15352,7 +15376,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "加载文件时出错：%@"
+            "value": "加载文件失败：%@"
           }
         }
       }
@@ -15369,7 +15393,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "重命名文件时出错：%@"
+            "value": "重命名文件失败：%@"
           }
         }
       }
@@ -15386,7 +15410,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "实验"
+            "value": "实验功能"
           }
         }
       }
@@ -15420,7 +15444,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Frameworks 与动态库"
+            "value": "框架与动态库"
           }
         }
       }
@@ -15471,7 +15495,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "添加你的第一个仓库，开始使用吧。"
+            "value": "添加第一个源即可开始使用。"
           }
         }
       }
@@ -15488,7 +15512,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "首先导入您的第一个 IPA 文件。"
+            "value": "导入第一个 IPA 文件即可开始使用。"
           }
         }
       }
@@ -15539,7 +15563,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "导入 .dylib、.deb 或 .framework 文件 \n 这些也会自动添加到 Tweaks 文件夹中"
+            "value": "导入 .dylib、.deb 或 .framework 文件。\n这些文件也会自动添加到“插件”文件夹。"
           }
         }
       }
@@ -15573,7 +15597,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "网址格式无效"
+            "value": "URL 格式无效"
           }
         }
       }
@@ -15590,7 +15614,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "从 v1.5.1 开始不再支持 Ksign 证书文件 (.ksign)，请参阅使用 .p12 和 .mobileprovision。"
+            "value": "从 v1.5.1 起，不再支持 Ksign 证书文件（.ksign），请改用 .p12 和 .mobileprovision。"
           }
         }
       }
@@ -15607,7 +15631,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "少"
+            "value": "收起"
           }
         }
       }
@@ -15624,7 +15648,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "光"
+            "value": "浅色"
           }
         }
       }
@@ -15641,7 +15665,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "薄荷"
+            "value": "薄荷绿"
           }
         }
       }
@@ -15692,7 +15716,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "未列出任何权利。"
+            "value": "未列出任何权限。"
           }
         }
       }
@@ -15709,7 +15733,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "无框架"
+            "value": "没有框架"
           }
         }
       }
@@ -15726,7 +15750,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "未列出隐私权限。"
+            "value": "未列出任何隐私权限。"
           }
         }
       }
@@ -15743,7 +15767,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "没有仓库"
+            "value": "没有源"
           }
         }
       }
@@ -15760,7 +15784,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "在此应用程序中找不到框架或dylib"
+            "value": "这个应用中未发现框架或动态库"
           }
         }
       }
@@ -15777,7 +15801,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "没有可用的发行说明"
+            "value": "暂无更新说明"
           }
         }
       }
@@ -15794,7 +15818,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "只修改（不签名）"
+            "value": "仅修改（不签名）"
           }
         }
       }
@@ -15811,7 +15835,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "仅当您拥有 Ad Hoc 证书时才使用此选项"
+            "value": "仅在你持有 Ad Hoc 证书时使用此选项。"
           }
         }
       }
@@ -15947,7 +15971,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "促销活动"
+            "value": "ProMotion"
           }
         }
       }
@@ -16066,7 +16090,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "特别感谢！"
+            "value": "特别感谢"
           }
         }
       }
@@ -16117,7 +16141,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "电报频道"
+            "value": "Telegram 频道"
           }
         }
       }
@@ -16151,7 +16175,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "IPA 文件正在下载中！\n你可以关闭此窗口，或继续下载更多文件！"
+            "value": "IPA 文件已开始下载！\n你可以关闭此窗口，或继续下载更多文件。"
           }
         }
       }
@@ -16168,7 +16192,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "这些选项会更改应用行为"
+            "value": "这些选项会改变应用的行为。"
           }
         }
       }
@@ -16185,7 +16209,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "这些选项会移除未签名 IPA 中的部分内容"
+            "value": "这些选项会从未签名 IPA 中移除部分内容。"
           }
         }
       }
@@ -16202,7 +16226,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "这是当前的强调色"
+            "value": "这是当前的强调色。"
           }
         }
       }
@@ -16219,7 +16243,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "该版本介绍：\n\n- 后台下载完成时的通知（您可以在应用程序功能设置中启用） \n- 使用证书的应用程序 ID 填充捆绑包 ID 的按钮\n- 删除对 ksign 证书文件的支持\n- 签名配置中应用程序名称的前缀/后缀 - 将 IPA 下载器重构为仅下载新功能"
+            "value": "本次版本更新内容：\n\n- 后台下载完成后可发送通知（可在“应用功能”中开启）\n- 新增一键填入证书 App ID 的按钮\n- 移除对 `.ksign` 证书文件的支持\n- 签名配置新增应用名称前缀 / 后缀\n- 重构 IPA 下载器，并整合到 Downloads 相关功能中"
           }
         }
       }
@@ -16236,7 +16260,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "这会强制应用使用本地化资源"
+            "value": "强制应用使用本地化资源。"
           }
         }
       }
@@ -16253,7 +16277,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "版本%@"
+            "value": "版本 %@"
           }
         }
       }
@@ -16321,7 +16345,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "您不想删除您唯一的证书，对吧>.<？"
+            "value": "你应该不想把唯一的证书删掉吧 >.<"
           }
         }
       }
@@ -16338,7 +16362,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你不想这样做！"
+            "value": "你不会真想这么做吧！"
           }
         }
       }
@@ -16355,7 +16379,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你已经否认了！"
+            "value": "你已拒绝授权！"
           }
         }
       }
@@ -16389,7 +16413,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "设备"
+            "value": "iDevice"
           }
         }
       }
@@ -16406,7 +16430,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "无法删除%1$lld项目%2$@"
+            "value": "删除 %1$lld 项%2$@失败"
           }
         }
       }
@@ -16423,7 +16447,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "无法导入 %1$lld 文件%2$@"
+            "value": "导入 %1$lld 个文件%2$@失败"
           }
         }
       }
@@ -16440,7 +16464,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "您无法自行更新 â%@â，请使用替代工具进行更新。"
+            "value": "你不能用 %@ 更新它自己，请使用其他工具进行更新。"
           }
         }
       }
@@ -16457,7 +16481,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "如果没有最初的 Feather 开发人员，这是不可能完成的！ ❗️❗️"
+            "value": "没有原版 Feather 开发者，这一切都无法实现！❤️"
           }
         }
       }
@@ -16474,7 +16498,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "您无法自行更新“%@”，请使用替代工具进行更新。"
+            "value": "你不能用 %@ 更新它自己，请使用其他工具进行更新。"
           }
         }
       }
@@ -16491,7 +16515,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "如果没有最初的 Feather 开发人员，这是不可能完成的！ ❤️"
+            "value": "没有原版 Feather 开发者，这一切都无法实现！❤️"
           }
         }
       }
